@@ -1,0 +1,82 @@
+---
+title: "The Role of Wealth and Spending in Learning Outcomes"
+subtitle: "An analysis of trends in national wealth, education spending, and learning outcomes"
+author: "Save the Children"
+date: 30th October 2024
+format: sc-scrolly-html
+# sc-logo: colour   # colour (default) | white | black | none
+---
+
+::: {.headline align="left" bg="biscuit" logo="true"}
+What does it cost
+to deliver learning?
+:::
+
+::: {.full}
+A recent paper written by Lant Pritchett makes a convincing case that GDP per capita (GDPPC) is the most important (or even the only important) metric that we should be interested in when discussing human development. He presents evidence that growth in GDPPC predicts improved human development better than any other metric, and that growth, even uneven or unequal growth is the key driver of national, and therefore human development. It’s a rigorously evidenced argument, and a riposte to those in the international development sector who may neglect the reality that very few countries achieve high levels of human development without economic development. 
+
+While I don’t want to understate the importance of this, what stands out is the remaining wiggle room in his analysis. His analysis showed that GDPPC explained 55 percent of change in targeted education outcomes, implying 45 percent of variance in national performance education which is not driven by increased wealth. This is the space in which we can work. 
+
+This doesn’t undermine his overall findings, but rather just re-claims some space for discussion of what systems do, not just how much wealth they encompass. Using this as a starting point, we will begin a series of blogs which look at comparable data to look at the patterns in domestic financing for education which can influence learning outcomes across countries.
+
+1.	Does national wealth as expressed by GDP per capita predict education attainment, expressed in Learning Adjusted Years of Schooling (LAYS)? 
+2.	Is the relationship the same for all countries, regardless of national wealth? 
+3.	Does spending on education, either as a proportion of GDP or as a proportion of the overall budget matter as predictors for LAYS achieved in a system? 
+4.	Do countries which increase spending over time also increase LAYS?  
+
+This analysis has been made possible by the advent of the Learning Adjusted Years of Schooling (LAYS) metric, and the dataset assembled by Evans et al. which gives us a comparative measure of the total amount of learning achieved by countries. 
+
+:::
+
+
+::: {.step fig="fig1_fullscatter.html" alt="Interactive line chart" caption="Source: World Bank Data and LAYS Database"}
+
+## GDPPC, Expenditure per Child and LAYS
+
+What we can see in Figure 1 looks clear. There is a steep, almost vertical relationship between both GDPPC and expenditure per child and LAYS for low and lower-middle income countries. If we re-visualise using log GDPPC we can now see a linear relationship implying a logarithmic relationship and diminishing returns between either GDPPC or expenditure per child and LAYS. 
+Where then is our wiggle room? 
+
+Taking just the relationship between log-GDPPC and LAYS we are left with (to oversimplify) 33 percent of variance which is not explained by a country’s wealth . This provides the space in which decisions about how resources are allocated can have an effect, as well as of course external factors unrelated to wealth, such as conflict, instability, governance, population characteristics and other non-education sector factors. 
+
+:::
+
+::: {.step fig="fig2_multilines.html" alt="Interactive line chart" caption="Source: World Bank Data and LAYS Database"}
+
+## National Wealth and LAYS Over Time
+
+From this we can see that for low-income countries, there appears to be a negative relationship between wealth or spending and LAYs. We can also see that for LMICs and UMICs the slope is positive, but the correlation is not statistically significant. Only for high income countries do we see a statistically significant positive relationship between increased GDPPC and LAYS. 
+
+Within this we can see countries that score far worse than expected for their level of income (for example those highlighted in the bottom left). We also see countries that score far better than peers with the same levels of national wealth (see upper highlight box). 
+
+This variance is where the real interest lies. 
+
+:::
+
+::: {.headline align="right" bg="red" logo="false"}
+Does change matter?
+:::
+
+::: {.step fig="fig4_delta_expenditure_vs_delta_lays.html" alt="Interactive line chart" caption="Source: World Bank Data and LAYS Database"}
+
+## National Wealth and LAYS Over Time
+
+To look into this further we regress change in LAYS over time on a) baseline LAYS, b) baseline GDP Per Capita, c) baseline spending (either percent of budget or percent of GDP) and d) change in spending (either percent of budget or percent of GDP). 
+
+What we find is that:
+
+1.	Countries with lower initial LAYS were more likely to improve. This is expected, as countries with low initial learning levels can make easier gains, as well as considering the stagnation in learning levels in upper-middle and high-income countries which we see in international comparative assessments such as PISA. 
+
+2.	Change in proportion of GDP spent on education is significant and positive, but not change in proportion of budget spent. This points us towards a conclusion that increasing absolute spending is more impactful than proportionate spending as compared to other sectors. This is logical considering the latter can increase without the actual expenditure per child increasing (e.g., through a reduction in spending in another sector). 
+ 
+:::
+
+::: {.full}
+## So what?
+
+National wealth as measured by GDP per capita is a significant (or perhaps the most significant) predictor of learning across education systems. However, this connection is weaker for countries with lower GDP Per Capita, implying that systemic constraints are more of a factor for low-income countries. Across income groups we see clear positive and negative outliers, countries from which we should be able to learn about bottlenecks and enablers. 
+
+Overall, proportion of budget spent on education is not a strong predictor of learning, however the correlation is stronger for low and lower-middle income countries, implying that efforts to mobilise greater investments in these countries can potentially add value. This pattern is repeated if we look at proportion of GDP spent on education as well. Looking at change over time, we see that increasing the proportion of GDP spent on education matters more than percent of budget. Countries who managed to increase this share were more likely to increase LAYS achieved, regardless of GDP per capita. 
+
+This implies, as we would have expected that spending is not everything. It matters, and it seems to matter most for the countries who can spend the least on education, but it is not the full story. In future blogs we will explore what exists in the wiggle room that remains once we account for national wealth. Does how we spend education budgets matter? What about what we spend in other sectors outside of education? What about things outside of budgetary control altogether? 
+
+:::

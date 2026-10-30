@@ -1,0 +1,170 @@
+/*-- scss:defaults --*/
+
+// Brand palette (Save the Children Global Brand Guidelines 2023, p.25)
+$sc-red: #DA291C;
+$sc-dark-red: #A61B14;
+$sc-black: #222221;
+$sc-copy-grey: #4A4F53;
+$sc-grey: #999999;
+$sc-biscuit-light: #F3F2EE;   // digital: differentiates sections of content
+$sc-figure-bg: #F5F5F5;       // matches Colors.grey_100, the figure panel in the chart themes
+
+$font-family-sans-serif: Arial, Helvetica, sans-serif !default;
+$headings-font-family: "Oswald", Arial, Helvetica, sans-serif;
+$headings-font-weight: 500;
+$body-bg: #FFFFFF;
+$body-color: $sc-black;
+$link-color: $sc-red;
+$link-hover-color: $sc-dark-red;
+$headings-color: $sc-black;
+$font-size-root: 18px;
+
+/*-- scss:rules --*/
+
+body { line-height: 1.6; }
+
+// Oswald for headlines only; sub-headings and other text stay Arial
+h1, h2, .title { font-weight: 500 !important; }
+h3, h4, h5, h6 {
+  font-family: $font-family-sans-serif;
+  font-weight: 700;
+}
+
+// Logo bar
+.sc-topbar {
+  background: #FFFFFF;
+  border-bottom: 1px solid #E6E6E6;
+  &.sc-topbar-dark { background: $sc-black; border-bottom: 0; }
+}
+.sc-topbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.9rem 1.5rem;
+}
+// clear space around the logo is kept by the bar padding
+.sc-logo { height: 44px; width: auto; display: block; }
+
+#title-block-header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5vh 1.5rem 2vh;
+  .title { font-weight: 500; border-left: 8px solid $sc-red; padding-left: 1rem; }
+  .subtitle, .quarto-title-meta { color: $sc-copy-grey; }
+}
+
+.sc-block {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+// a) full-width text block
+.sc-full {
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  .sc-inner { font-size: 1.15rem; max-width: 62rem; }
+}
+
+// b) text left, figure right
+.sc-step {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: 3rem;
+  align-items: start;
+  min-height: 85vh;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+
+  .sc-text { align-self: start; }
+  .sc-text > :first-child { margin-top: 0; }
+  // stretch so the sticky figure has the full row height to travel through
+  .sc-fig { align-self: stretch; }
+  .sc-fig-inner {
+    position: sticky;
+    top: 5vh;
+  }
+  .sc-iframe-wrap { overflow: hidden; border-radius: 8px; background: $sc-figure-bg; }
+  .sc-iframe {
+    border: 0;
+    display: block;
+    transform-origin: top left;
+  }
+  img { width: 100%; height: auto; display: block; border-radius: 8px; }
+  .sc-caption {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: $sc-copy-grey;
+  }
+}
+
+// Highlight box: red rectangle with rounded corners
+.highlight {
+  background: $sc-red;
+  color: #FFFFFF;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  margin: 2vh 0;
+  font-weight: 700;
+  p { margin: 0 0 0.5rem; }
+  p:last-child { margin-bottom: 0; }
+  a { color: #FFFFFF; text-decoration: underline; }
+}
+.sc-block > .highlight { margin: 3vh 0; max-width: 62rem; }
+
+// Headline box: Oswald headline in white text bars
+.sc-headline { padding-top: 4vh; padding-bottom: 4vh; }
+.sc-hl-band {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+
+  &.sc-bg-biscuit { background: $sc-biscuit-light; }
+  &.sc-bg-red { background: $sc-red; }
+  &.sc-bg-none { background: transparent; padding: 0; }
+
+  &.sc-align-left { align-items: flex-start; }
+  &.sc-align-right { align-items: flex-end; text-align: right; }
+  &.sc-align-center { align-items: center; text-align: center; }
+}
+.sc-hl-line {
+  display: block;
+  width: fit-content;
+  background: #FFFFFF;
+  color: $sc-black;
+  font-family: "Oswald", Arial, sans-serif;
+  font-weight: 500;
+  font-size: clamp(1.8rem, 4.5vw, 3rem);
+  line-height: 1.15;
+  // white margin around the text is 25% of the cap height
+  padding: 0.08em 0.22em;
+}
+.sc-hl-logo {
+  display: block;
+  width: fit-content;
+  background: #FFFFFF;
+  padding: 0.5rem 0.75rem;
+}
+.sc-hl-logo-img { height: 34px; width: auto; display: block; }
+
+// scroll reveal (only when JS is active, so content never gets stuck hidden)
+.sc-js {
+  .sc-text, .sc-fig {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .sc-fig { transition-delay: 0.15s; }
+  .is-visible { opacity: 1; transform: none; }
+}
+
+@media (max-width: 800px) {
+  .sc-step {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    min-height: 0;
+    .sc-text { padding-top: 0; }
+    .sc-fig-inner { position: static; }
+  }
+}

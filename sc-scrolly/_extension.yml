@@ -1,0 +1,19 @@
+title: SC Scrollytelling
+author: Save the Children
+version: 0.1.0
+quarto-required: ">=1.4.0"
+contributes:
+  formats:
+    html:
+      theme:
+        - sc-scrolly.scss
+        - oswald-font.scss
+      page-layout: custom
+      toc: false
+      smooth-scroll: true
+      embed-resources: true
+      code-tools: false
+      filters:
+        - scrolly.lua
+      include-after-body:
+        - scrolly.html
